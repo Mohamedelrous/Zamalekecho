@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zamalek Echo 1911 – News, Videos & Store</title>
+<meta name="description" content="Zamalek news, match videos and fan store from the Instagram page @zamalekecho1911.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbfaf8;--ink:#1a1214;--red:#c8102e;--red-d:#8f0b21;--line:#e6dfe0;--mute:#6b5f61;--card:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--paper:#140d0f;--ink:#f6efef;--line:#3a2a2e;--mute:#b3a3a6;--card:#1d1215}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 Cairo,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:2px solid var(--red)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
+.brand{font:400 22px Anton,sans-serif;letter-spacing:.04em;text-decoration:none}
+nav{display:flex;gap:18px;align-items:center}
+nav a{text-decoration:none;font-weight:600}
+nav a:hover{color:var(--red)}
+button,.btn{font:600 15px Cairo,sans-serif;background:var(--red);color:#fff;border:0;padding:9px 18px;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block}
+button:hover,.btn:hover{background:var(--red-d)}
+.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.ghost:hover{background:var(--ink);color:var(--paper)}
+.hero{padding:56px 0 40px;overflow:hidden}
+.echo{font:400 clamp(56px,16vw,168px)/.95 Anton,sans-serif;margin:0;color:var(--red);letter-spacing:.01em;text-shadow:.04em .04em 0 var(--paper),.06em .06em 0 var(--red),.1em .1em 0 var(--paper),.12em .12em 0 var(--red),.16em .16em 0 var(--paper),.18em .18em 0 var(--red)}
+.hero p{max-width:52ch;font-size:18px;margin:34px 0 20px}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font:400 34px Anton,sans-serif;margin:0 0 6px;letter-spacing:.03em}
+.sub{color:var(--mute);margin:0 0 24px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.news .lead{grid-column:1/-1}
+article,.prod,.vid{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+article{padding:18px;border-left:4px solid var(--red)}
+article h3{margin:4px 0 6px;font-size:19px;line-height:1.3}
+.lead h3{font-size:26px}
+.meta{font-size:13px;color:var(--mute)}
+.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--red),var(--red-d));display:grid;place-items:center;color:#fff;font:400 20px Anton,sans-serif;position:relative}
+.thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.thumb button{background:#fff;color:var(--red);border-radius:50%;width:52px;height:52px;padding:0;font-size:18px}
+.body{padding:14px 16px}
+.body h3{margin:0 0 6px;font-size:17px}
+.price{font-weight:700;color:var(--red)}
+.prod .thumb{aspect-ratio:1/1;font-size:34px}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+#cart{position:fixed;right:0;top:0;bottom:0;width:min(360px,100%);background:var(--paper);border-left:2px solid var(--red);padding:20px;transform:translateX(105%);transition:transform .25s;z-index:10;overflow:auto}
+#cart.open{transform:none}
+#cart li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+#cart ul{padding:0;margin:14px 0}
+.notice{background:var(--card);border:1px dashed var(--red);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--mute);margin-bottom:20px}
+footer{padding:32px 0;border-top:2px solid var(--red);color:var(--mute);font-size:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:560px){nav a.hide{display:none}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#top">ZAMALEK ECHO 1911</a>
+  <nav>
+    <a class="hide" href="#news">News</a><a class="hide" href="#videos">Videos</a><a class="hide" href="#store">Store</a>
+    <button id="cartBtn" aria-controls="cart">Cart (<span id="count">0</span>)</button>
+  </nav>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+  <h1 class="echo">ZAMALEK<br>ECHO</h1>
+  <p>News, match videos and fan gear for the White Knights. Run by the Instagram page <strong>@zamalekecho1911</strong>.</p>
+  <div class="row">
+    <a class="btn" href="https://www.instagram.com/zamalekecho1911/" target="_blank" rel="noopener">Follow on Instagram</a>
+    <a class="btn ghost" href="#store">Shop the store</a>
+  </div>
+</div>
+
+<section id="news"><div class="wrap">
+  <h2>News</h2><p class="sub">Latest from the club and the league.</p>
+  <div id="demoNote" class="notice" hidden>Showing sample content. Add your Soma API details in the CONFIG block of this file to load live data.</div>
+  <div class="grid news" id="newsGrid"></div>
+</div></section>
+
+<section id="videos"><div class="wrap">
+  <h2>Videos</h2><p class="sub">Goals, highlights and fan moments.</p>
+  <div class="grid" id="vidGrid"></div>
+</div></section>
+
+<section id="store"><div class="wrap">
+  <h2>Store</h2><p class="sub">Orders are confirmed through our Instagram DMs.</p>
+  <div class="grid" id="prodGrid"></div>
+</div></section>
+</main>
+
+<aside id="cart" aria-label="Cart">
+  <div class="foot"><h2 style="font-size:26px">Your cart</h2><button class="ghost" id="closeCart">Close</button></div>
+  <ul id="cartList"></ul>
+  <p><strong>Total: <span id="total">0</span> EGP</strong></p>
+  <button id="orderBtn" style="width:100%">Send order on Instagram</button>
+  <p class="meta">Your order text is copied, then Instagram opens. Paste it in the DM.</p>
+</aside>
+
+<footer><div class="wrap">Fan-run site. Not affiliated with Zamalek SC. © 1911 Echo.</div></footer>
+
+<script>
+/* ===== CONFIG: fill in once you have the Soma API docs ===== */
+const CONFIG = {
+  instagram: "zamalekecho1911",
+  soma: {
+    baseUrl: "",          // e.g. "https://api.example.com/v1"
+    apiKey: "",           // only use a key that is safe for public browsers
+    endpoints: { news: "/news", videos: "/videos", products: "/products" }
+  }
+};
+
+/* Sample content (replace via the API or edit here) */
+const SAMPLE = {
+  news: [
+    {title:"Sample headline: matchday preview goes here", summary:"Your latest Zamalek story appears here. Connect the Soma API or edit the SAMPLE data in index.html.", date:"2026-10-30"},
+    {title:"Sample: squad news", summary:"Short summary of the story.", date:"2026-10-29"},
+    {title:"Sample: transfer talk", summary:"Short summary of the story.", date:"2026-10-28"},
+    {title:"Sample: academy update", summary:"Short summary of the story.", date:"2026-10-27"}
+  ],
+  videos: [
+    {title:"Highlights (sample)", youtubeId:"", date:"2026-10-30"},
+    {title:"Best goals (sample)", youtubeId:"", date:"2026-10-25"},
+    {title:"Fans in the stands (sample)", youtubeId:"", date:"2026-10-20"}
+  ],
+  products: [
+    {id:"p1", name:"Home shirt", price:1200},
+    {id:"p2", name:"Away shirt", price:1200},
+    {id:"p3", name:"Scarf", price:250},
+    {id:"p4", name:"Cap", price:300}
+  ]
+};
+
+/* Maps whatever the Soma API returns to the shapes above. Adjust field names here. */
+const adapt = {
+  news: r => (r.items||r.data||r).map(x => ({title:x.title||x.headline, summary:x.summary||x.description||"", date:x.date||x.published_at||""})),
+  videos: r => (r.items||r.data||r).map(x => ({title:x.title, youtubeId:x.youtubeId||x.video_id||"", date:x.date||""})),
+  products: r => (r.items||r.data||r).map(x => ({id:String(x.id), name:x.name||x.title, price:Number(x.price)||0}))
+};
+
+async function load(kind){
+  const s = CONFIG.soma;
+  if(!s.baseUrl) return null;
+  try{
+    const res = await fetch(s.baseUrl + s.endpoints[kind], {headers: s.apiKey ? {Authorization:"Bearer "+s.apiKey} : {}});
+    if(!res.ok) throw new Error(res.status);
+    return adapt[kind](await res.json());
+  }catch(e){ console.warn("Soma API failed for", kind, e); return null; }
+}
+
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const n = document.createElement(tag); if(cls) n.className = cls; if(text!=null) n.textContent = text; return n; };
+const igDM = "https://ig.me/m/" + CONFIG.instagram;
+
+function renderNews(list){
+  const g = $("newsGrid"); g.replaceChildren();
+  list.forEach((n,i) => {
+    const a = el("article", i===0 ? "lead" : "");
+    a.append(el("div","meta",n.date), el("h3","",n.title), el("p","",n.summary));
+    g.append(a);
+  });
+}
+
+function renderVideos(list){
+  const g = $("vidGrid"); g.replaceChildren();
+  list.forEach(v => {
+    const c = el("div","vid"), t = el("div","thumb");
+    if(v.youtubeId){
+      const b = el("button","","▶"); b.setAttribute("aria-label","Play "+v.title);
+      b.onclick = () => { const f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.youtubeId) + "?autoplay=1";
+        f.allow = "autoplay; encrypted-media; picture-in-picture"; f.allowFullscreen = true; f.title = v.title;
+        t.replaceChildren(f); };
+      t.append(b);
+    } else { t.append(el("span","","ZAMALEK")); }
+    const body = el("div","body"); body.append(el("h3","",v.title), el("div","meta",v.date));
+    c.append(t, body); g.append(c);
+  });
+}
+
+const cart = {};
+let products = [];
+function renderProducts(list){
+  products = list;
+  const g = $("prodGrid"); g.replaceChildren();
+  list.forEach(p => {
+    const c = el("div","prod"), t = el("div","thumb"); t.append(el("span","",p.name.toUpperCase()));
+    const body = el("div","body"); body.append(el("h3","",p.name));
+    const foot = el("div","foot"); foot.append(el("span","price",p.price+" EGP"));
+    const b = el("button","","Add to cart"); b.onclick = () => { cart[p.id] = (cart[p.id]||0)+1; renderCart(); $("cart").classList.add("open"); };
+    foot.append(b); body.append(foot); c.append(t, body); g.append(c);
+  });
+}
+
+function orderText(){
+  const lines = products.filter(p => cart[p.id]).map(p => cart[p.id]+" x "+p.name+" ("+p.price*cart[p.id]+" EGP)");
+  const total = products.reduce((s,p) => s + (cart[p.id]||0)*p.price, 0);
+  return "Hi Zamalek Echo, I want to order:\n" + lines.join("\n") + "\nTotal: " + total + " EGP";
+}
+
+function renderCart(){
+  const ul = $("cartList"); ul.replaceChildren();
+  let total = 0, count = 0;
+  products.forEach(p => {
+    const q = cart[p.id]; if(!q) return;
+    total += q*p.price; count += q;
+    const li = el("li"); li.append(el("span","",q+" × "+p.name));
+    const r = el("button","ghost","Remove"); r.onclick = () => { cart[p.id]--; if(!cart[p.id]) delete cart[p.id]; renderCart(); };
+    li.append(r); ul.append(li);
+  });
+  $("total").textContent = total; $("count").textContent = count;
+  $("orderBtn").disabled = !count;
+}
+
+$("cartBtn").onclick = () => $("cart").classList.toggle("open");
+$("closeCart").onclick = () => $("cart").classList.remove("open");
+$("orderBtn").onclick = async () => {
+  const text = orderText();
+  try{ await navigator.clipboard.writeText(text); }catch(e){}
+  window.open(igDM, "_blank", "noopener");
+};
+
+(async function init(){
+  const [n,v,p] = await Promise.all([load("news"), load("videos"), load("products")]);
+  if(!n || !v || !p) $("demoNote").hidden = false;
+  renderNews(n || SAMPLE.news); renderVideos(v || SAMPLE.videos); renderProducts(p || SAMPLE.products); renderCart();
+})();
+</script>
+</body>
+</html>
